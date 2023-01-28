@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/28 15:38:54 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/28 17:49:14 by rnovotny         ###   ########.fr       */
+/*   Created: 2023/01/28 17:41:11 by rnovotny          #+#    #+#             */
+/*   Updated: 2023/01/28 17:41:52 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdarg.h>
+size_t	ft_strlen(const char *str)
+{
+	int	n;
 
-int		ft_printf(const char *format, ...);
-char	*ft_decide(va_list ap, char c);
+	n = 0;
+	while (str[n] != 0)
+		n++;
+	return (n);
+}
 
-void	ft_putstr_fd(char *s, int fd);
-size_t	ft_strlen(const char *str);
-
-#endif
+void	ft_putstr_fd(char *s, int fd)
+{
+	if (s)
+		write(fd, s, ft_strlen(s));
+}
