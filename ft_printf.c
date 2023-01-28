@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 15:38:38 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/28 17:50:11 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/28 17:59:05 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 //		each type will be handled by a different function
 //		function converts argument appropriately and outputs string
 //		string is combined with format and output with 'write'
-// TODO: finish ft_decide
+// TODO: finish ft_decide and ft_types
 
 #include "ft_printf.h"
 
 char	*ft_decide(va_list ap, char c)
 {
 	if (c == 'c')
-	return ("abcd");
+		return (ft_char(ap, c));
 }
 
 int	ft_printf(const char *format, ...)
