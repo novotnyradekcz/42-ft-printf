@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 17:41:11 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/31 10:17:49 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/31 16:23:51 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ static int	ft_special(int n)
 		return (write(1, "-2147483648", 11));
 	if (n == 0)
 		return (write(1, "0", 1));
+	return (0);
 }
 
 int	ft_putnbr(int n)
@@ -45,7 +46,9 @@ int	ft_putnbr(int n)
 
 	i = 0;
 	neg = 0;
-	return (ft_special(n));
+	counter = 0;
+	if (n == -2147483648 || n == 0)
+		return (ft_special(n));
 	if (n < 0 && n != -2147483648)
 	{
 		n = -n;
@@ -58,7 +61,7 @@ int	ft_putnbr(int n)
 		i++;
 	}
 	if (neg)
-		counter + =write(1, "-", 1);
+		counter += write(1, "-", 1);
 	while (i > 0)
 	{
 		i--;
