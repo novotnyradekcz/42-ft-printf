@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 17:57:14 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/31 17:31:32 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/31 17:38:16 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_char(va_list ap)
 {
-	char a;
+	char	a;
 
 	a = (char) va_arg(ap, int);
 	return (write(1, &a, 1));
