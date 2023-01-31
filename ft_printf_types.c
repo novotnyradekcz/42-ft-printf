@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 17:57:14 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/31 17:06:13 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/31 17:31:32 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,12 @@ int	ft_int(va_list ap)
 	return (ft_putnbr(i));
 }
 
-int	ft_hex(va_list ap)
+int	ft_hex(va_list ap, char c)
 {
 	int	h;
 
 	h = va_arg(ap, int);
-	return (ft_putnbr(h));
+	if (c == 'x')
+		return (ft_puthex(h, 0));
+	return (ft_puthex(h, 1));
 }
