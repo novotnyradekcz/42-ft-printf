@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 17:57:14 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/31 17:38:16 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/31 17:44:12 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,14 @@ int	ft_string(va_list ap)
 }
 
 int	ft_int(va_list ap)
+{
+	int	i;
+
+	i = va_arg(ap, int);
+	return (ft_putnbr(i));
+}
+
+int	ft_uint(va_list ap)
 {
 	int	i;
 

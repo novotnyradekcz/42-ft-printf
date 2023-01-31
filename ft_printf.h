@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 15:38:54 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/31 17:34:33 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/31 17:44:23 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int		ft_decide(va_list ap, char c);
 int		ft_char(va_list ap);
 int		ft_string(va_list ap);
 int		ft_int(va_list ap);
+int		ft_uint(va_list ap);
 int		ft_hex(va_list ap, char c);
 
 int		ft_puthex(int n, int x);
