@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 17:57:14 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/02/02 16:26:51 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/02/02 17:45:11 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,20 +28,20 @@ int	ft_string(va_list ap)
 	return (write(1, str, ft_strlen(str)));
 }
 
-int	ft_int(va_list ap)
+int	ft_int(va_list ap, char c)
 {
 	int	i;
 
 	i = va_arg(ap, int);
-	return (ft_putnbr(i));
+	return (ft_put(i, c));
 }
 
-int	ft_uint(va_list ap)
+int	ft_uint(va_list ap, char c)
 {
 	unsigned int	i;
 
 	i = va_arg(ap, unsigned int);
-	return (ft_putnbr(i));
+	return (ft_put(i, c));
 }
 
 int	ft_hex(va_list ap, char c)
@@ -49,9 +49,7 @@ int	ft_hex(va_list ap, char c)
 	int	h;
 
 	h = va_arg(ap, int);
-	if (c == 'x')
-		return (ft_puthex(h, 0));
-	if (c == 'X')
-		return (ft_puthex(h, 1));
-	return(write(1, "0x", 2) + ft_puthex(h, 0));
+	if (c == 'x' || c == 'X')
+		return (ft_put(h, c));
+	return (write(1, "0x", 2) + ft_puthex(h, 0, 'x'));
 }
