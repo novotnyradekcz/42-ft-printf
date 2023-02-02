@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 15:38:54 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/31 17:44:23 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/02/02 16:28:29 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		ft_uint(va_list ap);
 int		ft_hex(va_list ap, char c);
 
 int		ft_puthex(int n, int x);
-int		ft_putnbr(int n);
+int		ft_putnbr(long n);
 void	ft_putstr_fd(char *s, int fd);
 size_t	ft_strlen(const char *str);
 

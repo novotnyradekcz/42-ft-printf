@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 17:41:11 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/31 17:37:59 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/02/02 16:33:48 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	ft_special(int n)
 	return (0);
 }
 
-int	ft_putnbr(int n)
+int	ft_putnbr(long n)
 {
 	char	buf[10];
 	int		i;
@@ -47,9 +47,9 @@ int	ft_putnbr(int n)
 	i = 0;
 	neg = 0;
 	counter = 0;
-	if (n == -2147483648 || n == 0)
-		return (ft_special(n));
-	if (n < 0 && n != -2147483648)
+	if (n == 0)
+		return (write(1, "0", 1));
+	if (n < 0)
 	{
 		n = -n;
 		neg = 1;

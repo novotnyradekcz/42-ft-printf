@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 15:38:38 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/31 17:49:41 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/02/02 16:27:11 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_decide(va_list ap, char c)
 	if (c == 's')
 		return (ft_string(ap));
 	if (c == 'p')
-		return (ft_char(ap));
+		return (ft_hex(ap, c));
 	if (c == 'd')
 		return (ft_int(ap));
 	if (c == 'i')
