@@ -10,10 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// TODO: create function for printing data from void *
-//		create function for printing unsigned int
-//		shorten functions in ft_utils.c to pass norminette
-
 #include "ft_printf.h"
 
 int	ft_decide(va_list ap, char c)
