@@ -1,6 +1,6 @@
 LIBRARY = libftprintf.a
 
-SRCS = ft_printf.c	ft_printf_utils.cc	ft_printf_types.c
+SRCS = ft_printf.c	ft_printf_utils.c	ft_printf_types.c
 
 BONUSSRCS = ft_printf_bonus.c
 
