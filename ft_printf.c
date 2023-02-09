@@ -6,9 +6,11 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 15:38:38 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/02/02 17:45:43 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/02/09 12:18:58 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+//	not working according to tester:	p, x, X, mix
 
 #include "ft_printf.h"
 
