@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 17:57:14 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/02/16 18:50:43 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/02/16 19:11:04 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	ft_string(va_list ap)
 	char	*str;
 
 	str = va_arg(ap, char *);
+	if (!str)
+		return (write(1, "(null)", 6));
 	return (write(1, str, ft_strlen(str)));
 }
 
@@ -46,9 +48,9 @@ int	ft_uint(va_list ap, char c)
 
 int	ft_hex(va_list ap, char c)
 {
-	long	h;
+	long long	h;
 
-	h = va_arg(ap, long);
+	h = va_arg(ap, long long);
 	if (c == 'x' || c == 'X')
 		return (ft_put(h, c));
 	return (write(1, "0x", 2) + ft_puthex(h, 0, 'x'));
