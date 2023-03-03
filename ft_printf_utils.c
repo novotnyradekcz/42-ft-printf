@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 17:41:11 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/02/16 19:04:22 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/02/19 20:34:30 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int	ft_putnbr(long n, int neg)
 	return (counter);
 }
 
-int	ft_puthex(long long n, int neg, char c)
+int	ft_puthex(unsigned long long n, int neg, char c)
 {
 	char	buf[16];
 	int		i;

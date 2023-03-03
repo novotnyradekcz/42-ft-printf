@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 17:57:14 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/02/16 19:11:04 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/02/19 18:49:57 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,7 @@ int	ft_hex(va_list ap, char c)
 	h = va_arg(ap, long long);
 	if (c == 'x' || c == 'X')
 		return (ft_put(h, c));
+	if (c == 'p' && h == 0)
+		return (write(1, "(nil)", 5));
 	return (write(1, "0x", 2) + ft_puthex(h, 0, 'x'));
 }
