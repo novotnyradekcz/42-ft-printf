@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 17:41:11 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/02/19 20:34:30 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/03/03 21:16:29 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ int	ft_put(long n, char c)
 	if (c == 'd' || c == 'i' || c == 'u')
 		counter += ft_putnbr(n, neg);
 	if (c == 'x' || c == 'X')
-		counter += ft_puthex(n, neg, c);
+		counter += ft_puthex((unsigned int)n, neg, c);
 	return (counter);
 }
 
-int	ft_putnbr(long n, int neg)
+int	ft_putnbr(unsigned int n, int neg)
 {
 	char	buf[10];
 	int		i;

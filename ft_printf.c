@@ -6,11 +6,11 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 15:38:38 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/02/16 19:11:19 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/03/03 20:05:17 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//	not working according to tester: p, x, X
+//	not working according to tester: x, X
 
 #include "ft_printf.h"
 
