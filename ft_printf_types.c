@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_types.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
+/*   By: rnovotny <rnovotny@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 17:57:14 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/03/22 19:40:59 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/05/17 15:34:15 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	ft_hex(va_list ap, char c)
 
 	h = va_arg(ap, unsigned long long);
 	if (c == 'x' || c == 'X')
-		return (ft_put(h, c));
+		return (ft_put((unsigned int)h, c));
 	if (c == 'p' && h == 0)
 		return (write(1, "(nil)", 5));
 	return (write(1, "0x", 2) + ft_puthex(h, 0, 'x'));

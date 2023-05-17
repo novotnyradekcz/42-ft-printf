@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
+/*   By: rnovotny <rnovotny@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 17:41:11 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/03/22 19:59:02 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/05/17 15:45:25 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_put(long n, char c)
 	if (c == 'd' || c == 'i' || c == 'u')
 		counter += ft_putnbr(n, neg);
 	if (c == 'x' || c == 'X')
-		counter += ft_puthex((unsigned int)n, neg, c);
+		counter += ft_puthex(n, neg, c);
 	return (counter);
 }
 

@@ -13,7 +13,7 @@ HEADER = ft_printf.h
 FLAGS = -Wall -Wextra -Werror
 
 .c.o:
-	cc -c $(FLAGS) -I $(HEADER) $< -o ${<:.c=.o}
+	cc -c $(FLAGS) $< -o ${<:.c=.o}
 
 all:	$(LIBRARY)
 
